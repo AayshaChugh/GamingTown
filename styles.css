@@ -1,0 +1,107 @@
+body {
+  background: rgb(166, 167, 168);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  --blur: 2px;
+
+  font-family: "Otomanopee One", sans-serif;
+}
+.border {
+  box-sizing: border-box;
+  position: relative;
+  background: black;
+  background-image: linear-gradient(top right, #5d5d5b, #383838);
+  padding: 7px;
+  width: 220px;
+}
+.border:before {
+  content: " ";
+  display: block;
+  padding-bottom: 140%;
+}
+.frame {
+  top: 2.5%;
+  box-shadow: inset -1px 1px 6px 1px rgba(0, 0, 0, 0.24);
+  width: 95%;
+  height: 95%;
+  background: rgb(93, 100, 112);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+div.gallery {
+  margin: 5px;
+
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  transform: scale(104%);
+  transition: 1s;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+a.button {
+  display: inline-block;
+  text-decoration: none;
+
+  color: rgb(174, 198, 214);
+  background-color: transparent;
+  border: 1px solid rgb(163, 168, 243);
+  border-radius: 100px;
+
+  margin: 5px;
+  padding: 10px;
+
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgb(73, 75, 182) 50%
+  );
+  transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
+    color 0.5s ease 0s, background-color 0.5s ease;
+}
+
+a.button:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(117, 138, 184);
+  background-position: -100% 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
